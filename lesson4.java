@@ -1,14 +1,17 @@
 import java.util.Scanner;
 import java.util.Random;
-public class MAIN_2
+public class Main
 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter three names: ");
+        System.out.println("Enter three names to be sorted in ascending order: ");
         String name1 = scan.next();
         String name2 = scan.next();
         String name3 = scan.next();
-
+        ex1(name1,name2,name3);
+        System.out.println("Enter a word to get it's length: ");
+        String word_2 = scan.next();
+        ex2(word_2);
         System.out.println("Enter a three lettered word to check if it is a palindrome: ");
         char[] arr = new char[3];
         arr = scan.next().toCharArray();
@@ -16,13 +19,49 @@ public class MAIN_2
         System.out.println("v = " + v);
         System.out.println("Enter a three lettered word to print it the other way around: ");
         String word_4 = scan.next();
-        ex4(word);
+        ex4(word_4);
         String vowel_str = "aeoiu";
         System.out.println("Enter a four lettered word to print it without vowels: ");
         String word_5 = scan.next();
         ex5(word_5,0,"",vowel_str);
         Random r = new Random();
+        System.out.println("The number = " + r);
         ex6(r.nextInt(99));
+        scan.close();
+    }
+    public static void ex1(String name1, String name2, String name3) {
+        if (name1.compareTo(name2) <= 0 && name1.compareTo(name3) <= 0) {
+            System.out.println(name1);
+            if (name2.compareTo(name3) <= 0) {
+                System.out.println(name2);
+                System.out.println(name3);
+            } else {
+                System.out.println(name3);
+                System.out.println(name2);
+            }
+        } else if (name2.compareTo(name1) <= 0 && name2.compareTo(name3) <= 0) {
+            System.out.println(name2);
+            if (name1.compareTo(name3) <= 0) {
+                System.out.println(name1);
+                System.out.println(name3);
+            } else {
+                System.out.println(name3);
+                System.out.println(name1);
+            }
+        } else {
+            System.out.println(name3);
+            if (name1.compareTo(name2) <= 0) {
+                System.out.println(name1);
+                System.out.println(name2);
+            } else {
+                System.out.println(name2);
+                System.out.println(name1);
+            }
+        }
+    }
+    public static void ex2(String word_2)
+    {
+        System.out.println("word length = " + word_2.length());
     }
     public static boolean ex3(char[] arr, int left, int right)
     {
@@ -35,7 +74,7 @@ public class MAIN_2
     public static void ex4(String str4)
     {
         String new_str4 = str4.substring(2) + str4.substring(1,2) + str4.substring(0,1);
-        System.out.println("str4 = " + str4);
+        System.out.println("str4 = " + new_str4);
     }
     public static void ex5(String str5,int i,String new_string, String vowel_str)
     {
