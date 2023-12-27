@@ -4,9 +4,9 @@ public class lesson11 {
         ex2(3);
         System.out.println();
         System.out.println(ex3(20,3));
-        System.out.println("Number of digits: " + countDigits(10));
-        System.out.println("Number of even digits: " + countEvenDigits(2221));
-        System.out.println("Largest digit: " + findLargestDigit(9812));
+        System.out.println(countDigits(10));
+        System.out.println(countEvenDigits(2221));
+        System.out.println(findLargestDigit(9812));
     }
     public static void ex1(int num)
     {
@@ -57,7 +57,6 @@ public class lesson11 {
         }
     }
 
-    // Function to find the largest digit in a given number
     public static int ex6(int number) {
         if (number < 10) {
             return number;
