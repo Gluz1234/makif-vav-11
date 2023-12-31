@@ -32,4 +32,17 @@ public class Point {
         System.out.println("x = " + _x);
         System.out.println("y = " + _y);
     }
+    public void move(int deltaX,int deltaY)
+    {
+        _x = deltaX;
+        _y = deltaY;
+    }
+    public double distance(Point p)
+    {
+        return (Math.hypot(_x- p.get_x(), _y- p.get_y()));
+    }
+    public String toString()
+    {
+        return "The point is:(" + _x + "," + _y + ")";
+    }
 }
