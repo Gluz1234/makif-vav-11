@@ -15,5 +15,12 @@ public class Tester {
         Snack[] arr = new Snack[]{s1,s2,s3};
         double sum = total(arr);
         System.out.println("sum = " + sum);
+        A a1=new A(3,3);
+        System.out.println(a1);
+        a1.setN1(0);
+        a1.setN2(0);
+        System.out.println(a1);
+        a1.add(5);
+        System.out.println(a1);
     }
 }
